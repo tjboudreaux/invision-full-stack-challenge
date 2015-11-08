@@ -8,6 +8,11 @@
   },
   "author": "Travis Boudreaux <tjboudreaux@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjboudreaux/invision-full-stack-challenge.git"
+  },
+  "readme": "../README.md",
   "dependencies": {
     "expect": "^1.12.2",
     "expect.js": "^0.3.1",
