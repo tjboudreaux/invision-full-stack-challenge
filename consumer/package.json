@@ -9,8 +9,13 @@
   "author": "Travis Boudreaux <tjboudreaux@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "expect.js": "^0.3.1",
-    "lodash": "^3.10.1",
-    "mocha": "^2.3.3"
+    "body-parser": "^1.14.1",
+    "connect": "^3.4.0",
+    "connect-timeout": "^1.7.0",
+    "invision-common": "file:../common"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "mocha-lcov-reporter": "^1.0.0"
   }
 }
