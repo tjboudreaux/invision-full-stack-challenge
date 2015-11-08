@@ -1,13 +1,19 @@
+/**
+ * An object representation of a mathematical expression.
+ * @module expression
+ */
+
 'use strict';
 
 /**
  * A regular expression to match mathematical expression strings against.
+ * @constant
  * @type {RegExp}
  */
-var expressionRegex = /^(\d*)([+-\\\/*])(\d*)=$/;
+var EXPRESSION_REGEX = /^(\d*)([+-\\\/*])(\d*)=$/;
 
 /**
- * @description A list of valid operation types
+ * A list of valid operation types
  * @private
  * @type {string[]}
  */
@@ -23,7 +29,8 @@ var Expression = function(expressionString) {
 };
 
 /**
- * @description Parse a mathematical expression string.
+ * Parse a mathematical expression string.
+ * @throws {TypeError} if the expressionString can not be parsed as a mathematical expression.
  * @param expressionString
  */
 Expression.prototype.parseExpressionString = function(expressionString)
@@ -31,15 +38,16 @@ Expression.prototype.parseExpressionString = function(expressionString)
     //replace whitespace
     expressionString = expressionString.replace(/\s*/g, '');
 
-    if (!expressionRegex.test(expressionString)) {
+    if (!EXPRESSION_REGEX.test(expressionString)) {
         throw new TypeError(expressionString + ' is not a parsable mathematical expression.');
     }
 
-    var matches = expressionRegex.exec(expressionString);
+    var matches = EXPRESSION_REGEX.exec(expressionString);
 
     this.valueA = matches[1];
     this.operator = matches[2];
     this.valueB = matches[3];
+
 };
 
 /**
@@ -49,18 +57,7 @@ Expression.prototype.parseExpressionString = function(expressionString)
  * @returns {Object}
  */
 Expression.prototype.evaluate = function() {
-
-    if (validOperations.indexOf(this.operator) == -1) {
-        throw new TypeError('Operator "' + this.operator + '" is invalid');
-    }
-
-    if (typeof this.valueA != Number ||
-        typeof this.valueB != Number
-    ) {
-        throw new TypeError ("Values must be a valid number");
-    }
-
-    return eval(valueA.toString() + operator + valueB.toString());
+    return eval(this.valueA.toString() + this.operator + this.valueB.toString());
 };
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "inivision-full-stack-common",
+  "name": "invision-common",
   "version": "0.0.1",
   "description": "A common library used in the invision full stack code challenge.",
   "main": "index.js",
@@ -11,6 +11,11 @@
   "dependencies": {
     "expect.js": "^0.3.1",
     "lodash": "^3.10.1",
-    "mocha": "^2.3.3"
+    "winston": "^2.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "^1.0.0"
   }
 }

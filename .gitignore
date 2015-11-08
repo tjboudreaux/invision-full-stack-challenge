@@ -2,7 +2,7 @@ created by https://www.gitignore.io/api/node,osx,vim
 
 ### Node ###
 # Logs
-logs
+logs/*
 *.log
 npm-debug.log*
 
