@@ -1,0 +1,16 @@
+[
+  {
+    "uid": "producer01",
+    "append": true,
+    "watch": true,
+    "script": "index.js",
+    "args": ["3000", "producer01"]
+  },
+  {
+    "uid": "producer02",
+    "append": true,
+    "watch": true,
+    "script": "index.js",
+    "args": ["3000", "producer02"]
+  }
+]

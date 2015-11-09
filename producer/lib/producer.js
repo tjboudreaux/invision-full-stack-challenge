@@ -37,7 +37,7 @@ Producer.prototype.push = function() {
         body: JSON.stringify(payload)
     };
 
-    logger.info("Producer [" + this.uid + "] - sending new expression [" + payload.expression + "] to consumer" );
+    logger.info("Producer [" + this.uid + "] - Expression Pushed to Consumer [" + payload.expression + "]");
 
     //create the request promise
     return requestPromise(requestOptions);

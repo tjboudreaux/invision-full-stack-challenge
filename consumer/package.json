@@ -4,6 +4,7 @@
   "description": "The consumer process library used in the invision full stack code challenge.",
   "main": "index.js",
   "scripts": {
+    "start-forever": "forever start index.js 3000",
     "test": "mocha -R list test",
     "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
@@ -18,6 +19,7 @@
     "body-parser": "^1.14.1",
     "connect": "^3.4.0",
     "connect-timeout": "^1.7.0",
+    "forever": "^0.15.1",
     "invision-common": "file:../common"
   },
   "devDependencies": {
