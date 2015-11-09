@@ -4,7 +4,7 @@
   "description": "The consumer process library used in the invision full stack code challenge.",
   "main": "index.js",
   "scripts": {
-    "start-forever": "forever start index.js 3000",
+    "start-forever": "forever start --minUptime 1000 --spinSleepTime 1000 index.js 3000",
     "test": "mocha -R list test",
     "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },

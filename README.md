@@ -65,10 +65,12 @@ git clone https://github.com/tjboudreaux/invision-full-stack-challenge.git
 ./bin/start-all.sh
 ```
 
-All 3 processes will run via forever.  
+* All 3 processes will run via forever.
+* After starting the services, you can view log output by running `tail -f logs/*.log`  
 
 ### Log Output
 
 * Producers will write to the log file `./logs/producer.log`
 * The Consumer will write to the log file `./logs/consumer.log`
+
 
