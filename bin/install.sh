@@ -2,7 +2,7 @@
 
 #install consumer dependencies
 echo "Started consumer lib install"
-cd ../consumer
+cd ./consumer
 npm install
 echo "Finished consumer lib install"
 
