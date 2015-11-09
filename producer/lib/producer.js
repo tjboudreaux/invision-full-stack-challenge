@@ -28,6 +28,8 @@ Producer.prototype.push = function() {
         producerId: this.uid
     };
 
+
+
     var requestOptions = {
         method: 'POST',
         uri: this.consumerHost,
