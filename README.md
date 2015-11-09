@@ -27,10 +27,48 @@ The end product should:
 * Include UML Activity Diagram and UML Sequence Diagram documenting the business logic
 * Include Unit tests
 
+### UML Diagrams
 
-## My Approach
+* Activity Diagram 
+![Activity Diagram](docs/ActivityDiagram.png)
 
-### UML Diagrams 
+* Sequence Diagram 
+![Sequence Diagram](docs/SequenceDiagram.png)
 
-### How do I build this?
+### Dependencies
+
+* node v0.12.0
+* forever ^0.15.1
+
+### Installation Instructions
+
+* Step 1. Install Forever via NPM
+```
+npm install -g forever
+```
+
+* Step 2. Clone Repository
+```
+git clone https://github.com/tjboudreaux/invision-full-stack-challenge.git
+```
+
+* Step 3. Run install script
+```
+./bin/install.sh
+```
+
+### Running Producers and Consumers
+
+2 Producers and 1 Consumer can be started with the command  
+
+```
+./bin/start-all.sh
+```
+
+All 3 processes will run via forever.  
+
+### Log Output
+
+* Producers will write to the log file `./logs/producer.log`
+* The Consumer will write to the log file `./logs/consumer.log`
 
